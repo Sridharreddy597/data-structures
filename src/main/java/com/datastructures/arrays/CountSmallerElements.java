@@ -33,10 +33,10 @@ class CountSmallerElements {
 public long countOfElements(long arr[], long n, long x) {
 	if (x == 0)
 		return 0;
-	if (x > arr[(int) n--])
+	if (x > arr[n--])
 		return n;
 	for (long i = 0; i < n; i++) {
-		if (arr[(int) i] < x) {
+		if (arr[i] < x) {
 			nearestIndex = i;
 		} else {
 		}

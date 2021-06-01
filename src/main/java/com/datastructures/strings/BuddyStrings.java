@@ -27,10 +27,10 @@ class BuddyStrings {
 	
 	
 	public static void main(String[] args) {
-//		System.out.println(buddyStrings("ab", "ba"));
-//		System.out.println(buddyStrings("ab", "ab"));
+		System.out.println(buddyStrings("ab", "ba"));
+		System.out.println(buddyStrings("ab", "ab"));
 		System.out.println(buddyStrings("aa", "aa"));
-//		System.out.println(buddyStrings("aaaaaaabc", "aaaaaaacb"));
+		System.out.println(buddyStrings("aaaaaaabc", "aaaaaaacb"));
 	
 	}
 	
@@ -41,13 +41,7 @@ class BuddyStrings {
 
 		if (a.length() != b.length() || a.length() < 2 || b.length() < 2)
 			return false;
-		if(a.equals(b)) {
-			Set<Character> set= new HashSet<>();
-			for(char c: a.toCharArray()) { 
-				set.add(c);
-			}
-			if(set.size()!=1 || set.size()<a.length() ) return true;
-		}
+
 		if (a.length() == b.length()) {
 			List<Integer> characterList = new ArrayList<>();
 			for (int i = 0; i < a.length(); i++) {
@@ -59,7 +53,17 @@ class BuddyStrings {
 					&& a.charAt(characterList.get(1)) == b.charAt(characterList.get(0)));
 			
 		}
-
+		if(a.equals(b)) {
+			Set<Character> set= new HashSet<>();
+			for(char c: a.toCharArray()) { 
+			if(set.contains(c))
+				set.add(c);
+			}
+			if(set.size()<a.length())
+				return true;
+			else  return false;
+			
+		}
 		return false;
 	}
 }
