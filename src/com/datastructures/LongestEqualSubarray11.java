@@ -1,7 +1,8 @@
-import java.math.BigInteger;
+package src.com.datastructures;
+
 import java.util.*;
 
-public class LongestEqualSubarray {
+public class LongestEqualSubarray11 {
     public static int longestEqualSubarray(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<>();
         int maxLength = 0, prefixSum = 0;
