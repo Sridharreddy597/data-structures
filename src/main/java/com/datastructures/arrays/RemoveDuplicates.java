@@ -19,9 +19,7 @@ public class RemoveDuplicates {
 		
 		 // 3, 4, 9
         List<Integer> list = Arrays.asList(5, 3, 4, 1, 3, 7, 2, 9, 9, 4);
-        
-        list.stream().
-		
+
 	}
 
 }

@@ -31,7 +31,7 @@ public class EmployeeHighestSalaries {
 		// average age of male and female employees
 		System.out.println("--------------------Average age of male and female employees-----------------");
 		employees.stream()
-				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingInt(Employee::getAge)))
+				.collect(Collectors.groupingBy(Employee::getGender, Collectors.averagingLong(Employee::getAge)))
 				.forEach((key, value) -> System.out.println(key + "  " + value));
 
 		// Get the details of highest paid employee in the organization
