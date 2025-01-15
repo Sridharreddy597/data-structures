@@ -5,8 +5,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-class Employee
-{
+class Employee {
     private String firstName;
     private String lastName;
     private Long age;
@@ -271,8 +270,8 @@ class Employee
         //7. Given a String, find the first non-repeated character in it using Stream functions?
         System.out.println("----non-repeated character----");
         String input = "Java articles are Awesome";
-        Character s = input.chars().mapToObj(e -> Character.toLowerCase((char) e)).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting())).firstEntry().getKey();
-        System.out.println(s);
+        //Character s = input.chars().mapToObj(e -> Character.toLowerCase((char) e)).collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting())).firstEntry().getKey();
+        //System.out.println(s);
         //8. Given a String, find the first repeated character in it using Stream functions?
         System.out.println("----first repeated character----");
         input.chars().mapToObj(e -> Character.toLowerCase((char) e))

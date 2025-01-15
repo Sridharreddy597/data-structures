@@ -4,7 +4,7 @@ import java.util.*;
 
 public class DXCLuxoft {
 
-    public static int MatchingCharacters(String str) {
+    public static int matchingCharacters(String str) {
         Map<Character, Integer> charIndexMap = new HashMap<>();
         int maxUniqueCount = 0;
 
@@ -39,7 +39,7 @@ public class DXCLuxoft {
 
     public static void main(String[] args) {
         // Keep this function call here
-        Scanner s = new Scanner(System.in);
-        System.out.println(MatchingCharacters(s.nextLine()));
+        System.out.println(matchingCharacters("mmmerme"));
+        System.out.println(matchingCharacters("abccdefghi"));
     }
 }
